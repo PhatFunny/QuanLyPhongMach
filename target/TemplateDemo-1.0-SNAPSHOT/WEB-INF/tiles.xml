@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache
+        Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+        
+<tiles-definitions>
+    <definition name="baseLayout" template="/WEB-INF/layout/base.jsp">
+        <put-attribute name="title" value="..." />
+        <put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+        <put-attribute name="content" value="BASE" />
+    </definition>
+    
+    <definition name="index" extends="baseLayout">
+        <put-attribute name="title" value="Medical" />
+        <put-attribute name="content" value="/WEB-INF/jsp/index.jsp" />
+    </definition>
+    
+    <definition name="doctor" extends="baseLayout">
+        <put-attribute name="title" value="Bác sỹ" />
+        <put-attribute name="content" value="/WEB-INF/jsp/doctor.jsp" />
+    </definition>
+    
+    <definition name="medicine" extends="baseLayout">
+        <put-attribute name="title" value="Thuốc" />
+        <put-attribute name="content" value="/WEB-INF/jsp/medicine.jsp" />
+    </definition>
+    
+    <definition name="quanlythuoc" extends="baseLayout">
+        <put-attribute name="title" value="Quản lý thuốc" />
+        <put-attribute name="content" value="/WEB-INF/jsp/quanlythuoc.jsp" />
+    </definition>
+    
+    <definition name="medicine-detail" extends="baseLayout">
+        <put-attribute name="title" value="Chi tiết thuốc" />
+        <put-attribute name="content" value="/WEB-INF/jsp/medicine-detail.jsp" />
+    </definition>
+    
+    <definition name="login" extends="baseLayout">
+        <put-attribute name="title" value="Đăng nhập" />
+        <put-attribute name="content" value="/WEB-INF/jsp/login.jsp" />
+    </definition>
+    
+    <definition name="register" extends="baseLayout">
+        <put-attribute name="title" value="Đăng ký" />
+        <put-attribute name="content" value="/WEB-INF/jsp/register.jsp" />
+    </definition>
+    
+    <definition name="nhanvien" extends="baseLayout">
+        <put-attribute name="title" value="Nhân viên" />
+        <put-attribute name="content" value="/WEB-INF/jsp/nhanvien.jsp" />
+    </definition>
+    
+    <definition name="quanlynhanvien" extends="baseLayout">
+        <put-attribute name="title" value="Quản lý nhân viên" />
+        <put-attribute name="content" value="/WEB-INF/jsp/quanlynhanvien.jsp" />
+    </definition>
+    
+    <definition name="nhanvien-detail" extends="baseLayout">
+        <put-attribute name="title" value="Nhân viên" />
+        <put-attribute name="content" value="/WEB-INF/jsp/nhanvien-detail.jsp" />
+    </definition>
+    
+    <definition name="quanlyphieukhambenh" extends="baseLayout">
+        <put-attribute name="title" value="Quản lý phiếu khám bệnh" />
+        <put-attribute name="content" value="/WEB-INF/jsp/quanlyphieukhambenh.jsp" />
+    </definition>
+    
+    <definition name="phieukhambenh" extends="baseLayout">
+        <put-attribute name="title" value="Phiếu khám bệnh" />
+        <put-attribute name="content" value="/WEB-INF/jsp/phieukhambenh.jsp" />
+    </definition>
+    
+    <definition name="phieukhambenh-detail" extends="baseLayout">
+        <put-attribute name="title" value="Chi tiết phiếu khám bệnh" />
+        <put-attribute name="content" value="/WEB-INF/jsp/phieukhambenh-detail.jsp" />
+    </definition>
+
+    <definition name="toathuoc" extends="baseLayout">
+        <put-attribute name="title" value="Toa thuốc" />
+        <put-attribute name="content" value="/WEB-INF/jsp/toathuoc.jsp" />
+    </definition>
+    
+    <definition name="dangkykham" extends="baseLayout">
+        <put-attribute name="title" value="Đăng ký khám" />
+        <put-attribute name="content" value="/WEB-INF/jsp/dangkykham.jsp" />
+    </definition>
+    
+    <definition name="hosobenhnhan" extends="baseLayout">
+        <put-attribute name="title" value="Hồ sơ bệnh nhân" />
+        <put-attribute name="content" value="/WEB-INF/jsp/hosobenhnhan.jsp" />
+    </definition>
+    
+    <definition name="hoadonthuoc" extends="baseLayout">
+        <put-attribute name="title" value="Hóa đơn thuốc" />
+        <put-attribute name="content" value="/WEB-INF/jsp/hoadonthuoc.jsp" />
+    </definition>
+    
+    <definition name="lichkhambenhnhan" extends="baseLayout">
+        <put-attribute name="title" value="Lịch khám bệnh nhân" />
+        <put-attribute name="content" value="/WEB-INF/jsp/lichkhambenhnhan.jsp" />
+    </definition>
+    
+    <definition name="lichkhamcanhan" extends="baseLayout">
+        <put-attribute name="title" value="Lịch khám cá nhân" />
+        <put-attribute name="content" value="/WEB-INF/jsp/lichkhamcanhan.jsp" />
+    </definition>
+    
+    <definition name="guimail" extends="baseLayout">
+        <put-attribute name="title" value="Gửi mail" />
+        <put-attribute name="content" value="/WEB-INF/jsp/guimail.jsp" />
+    </definition>
+    
+    <!--/////////////////////////////////////////////////////////////////-->
+    
+    <definition name="baseAdminLayout" template="/WEB-INF/layout/base-admin.jsp">
+        <put-attribute name="title" value="Quản trị hệ thống phòng mạch" />
+        <put-attribute name="left" value="/WEB-INF/layout/admin-left.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/layout/admin-footer.jsp" />
+        <put-attribute name="content" value="BASE" />
+    </definition>
+    
+    <definition name="benhnhan-stats" extends="baseAdminLayout">
+        <put-attribute name="title" value="Thống kê số lượng bệnh nhân theo tháng" />
+        <put-attribute name="content" value="/WEB-INF/jsp/benhnhan-stats.jsp" />
+    </definition>
+    
+    <definition name="benhnhan-year-stats" extends="baseAdminLayout">
+        <put-attribute name="title" value="Thống kê số lượng bệnh nhân theo năm" />
+        <put-attribute name="content" value="/WEB-INF/jsp/benhnhan-year-stats.jsp" />
+    </definition>
+    
+    <definition name="doanhthu-stats" extends="baseAdminLayout">
+        <put-attribute name="title" value="Thống kê doanh thu theo thuốc" />
+        <put-attribute name="content" value="/WEB-INF/jsp/doanhthu-stats.jsp" />
+    </definition>
+    
+    <definition name="doanhthu-month-stats" extends="baseAdminLayout">
+        <put-attribute name="title" value="Thống kê doanh thu theo tháng" />
+        <put-attribute name="content" value="/WEB-INF/jsp/doanhthu-month-stats.jsp" />
+    </definition>
+    
+    <definition name="doanhthu-year-stats" extends="baseAdminLayout">
+        <put-attribute name="title" value="Thống kê doanh thu theo năm" />
+        <put-attribute name="content" value="/WEB-INF/jsp/doanhthu-year-stats.jsp" />
+    </definition>
+    
+</tiles-definitions>
